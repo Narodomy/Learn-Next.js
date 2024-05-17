@@ -10,8 +10,12 @@ import { usePathname } from 'next/navigation';
 // ...
 
 export default function NavLinks() {
+  const links = [
+    { name: 'Home', href: '/', icon: HomeIcon },
+    { name: 'Users', href: '/users', icon: UserGroupIcon },
+    { name: 'Documents', href: '/documents', icon: DocumentDuplicateIcon },
+  ];
   const pathname = usePathname();
-
   return (
     <>
       {links.map((link) => {
